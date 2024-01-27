@@ -1,7 +1,12 @@
-import React from "react";
+import { CardComponent } from "../../components/postCard";
+import { Container } from "reactstrap";
 
 function PostPage() {
-  return <div>index</div>;
+  return (
+    <Container>
+      <CardComponent imgUrl={} title={""} description={""} />
+    </Container>
+  );
 }
 
 export default PostPage;
