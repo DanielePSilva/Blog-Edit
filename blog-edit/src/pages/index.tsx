@@ -47,6 +47,7 @@ function RootPage() {
               imgUrl={card.imageUrl}
               title={card.title}
               description={card.description}
+              createdAt={card.createdAt}
             />
           </Col>
         ))}
