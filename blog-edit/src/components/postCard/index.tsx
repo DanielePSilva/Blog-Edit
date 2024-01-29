@@ -6,15 +6,9 @@ interface CardProps {
   imgUrl: string;
   title: string;
   description: string;
-  createdAt: string;
 }
 
-export function CardComponent({
-  title,
-  description,
-  imgUrl,
-  createdAt,
-}: CardProps) {
+export function CardComponent({ title, description, imgUrl }: CardProps) {
   return (
     <Card
       style={{
@@ -31,7 +25,6 @@ export function CardComponent({
       <CardBody>
         <CardTitle tag="h5">{title}</CardTitle>
         <CardText>{description}</CardText>
-        <Col>{createdAt}</Col>
       </CardBody>
     </Card>
   );

@@ -1,14 +1,4 @@
-import React from "react";
-
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  Col,
-  Container,
-  Row,
-} from "reactstrap";
+import { Container } from "reactstrap";
 import { PostComponent } from "../../components/postDetails";
 
 const cardList = [
@@ -50,16 +40,12 @@ function PostPage() {
   const cardSeleted = cardList[0];
   return (
     <Container>
-      <Row>
-        <Col>
-          <PostComponent
-            imgUrl={cardSeleted.imageUrl}
-            title={cardSeleted.title}
-            description={cardSeleted.description}
-            key={cardSeleted.id}
-          />
-        </Col>
-      </Row>
+      <PostComponent
+        imgUrl={cardSeleted.imageUrl}
+        title={cardSeleted.title}
+        description={cardSeleted.description}
+        key={cardSeleted.id}
+      />
     </Container>
   );
 }

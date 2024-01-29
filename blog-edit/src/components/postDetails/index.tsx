@@ -1,36 +1,42 @@
 import React from "react";
-import { Card, CardBody, CardText, CardTitle, Col } from "reactstrap";
+import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
 interface PostProps {
   imgUrl: string;
   title: string;
   description: string;
-  createdAt: string;
 }
 
-export function PostComponent({ title, description, imgUrl }): PostProps {
+export function PostComponent({ title, description, imgUrl }: PostProps) {
   return (
     <Card
       style={{
-        width: "50rem",
-        padding: "20px",
+        width: "100%",
+        padding: "30px",
       }}
     >
-      <img
-        alt="Sample"
-        src={imgUrl}
-        style={{ borderRadius: "15px", height: "200px", width: "400px" }}
-      />
-
       <CardBody
         style={{
           display: "flex",
-          flexDirection: "column",
         }}
       >
-        <CardTitle tag="h5">{title}</CardTitle>
-        <CardText>{description}</CardText>
+        <img
+          alt="Sample"
+          src={imgUrl}
+          style={{ borderRadius: "15px", height: "200px", width: "300px" }}
+        />
+        <div
+          style={{
+            padding: "15px",
+          }}
+        >
+          <CardTitle tag="h5">{title}</CardTitle>
+          <CardText>{description}</CardText>
+        </div>
       </CardBody>
     </Card>
   );
 }
+
+// criar coluna para img e coluna para o corpo de texto para depois colocar lado.
+// a row  cria uma linha e a coluna divide em colunas lado
