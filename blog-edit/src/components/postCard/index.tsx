@@ -1,14 +1,16 @@
-import { Card, CardBody, CardText, CardTitle, Col } from "reactstrap";
+import { Card, CardBody, CardText, CardTitle } from "reactstrap";
 
 //postCard Components
 
 interface CardProps {
+  id: string;
   imgUrl: string;
   title: string;
   description: string;
+  createdAt: Date;
 }
 
-export function CardComponent({ title, description, imgUrl }: CardProps) {
+export function CardComponent({ title, description, imgUrl, id }: CardProps) {
   return (
     <Card
       style={{
