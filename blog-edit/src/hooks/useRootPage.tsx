@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 interface CardProps {
   id: string;
-  imgUrl: string;
+  imageUrl: string;
   title: string;
   description: string;
   createdAt: string;

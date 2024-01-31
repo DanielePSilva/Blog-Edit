@@ -12,7 +12,7 @@ function RootPage() {
         style={{
           display: "flex",
           justifyContent: "flex-end",
-          marginBottom: "2rem",
+          marginBottom: "3rem",
         }}
       >
         <select value={selectValue} onChange={handleSelect}>

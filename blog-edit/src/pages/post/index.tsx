@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 interface PostProps {
   id: string;
-  imgUrl: string;
+  imageUrl: string;
   title: string;
   description: string;
   createdAt: Date;
