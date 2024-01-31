@@ -37,6 +37,3 @@ export function PostComponent({ title, description, imgUrl }: PostProps) {
     </Card>
   );
 }
-
-// criar coluna para img e coluna para o corpo de texto para depois colocar lado.
-// a row  cria uma linha e a coluna divide em colunas lado

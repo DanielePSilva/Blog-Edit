@@ -7,16 +7,24 @@ interface CardProps {
   imgUrl: string;
   title: string;
   description: string;
-  createdAt: Date;
+  handleCardClick: (id: string) => void;
 }
 
-export function CardComponent({ title, description, imgUrl, id }: CardProps) {
+export function CardComponent({
+  id,
+  title,
+  description,
+  imgUrl,
+  handleCardClick,
+}: CardProps) {
   return (
     <Card
       style={{
         width: "18rem",
         padding: "15px",
+        cursor: "pointer",
       }}
+      onClick={() => handleCardClick(id)}
     >
       <img
         alt="Sample"

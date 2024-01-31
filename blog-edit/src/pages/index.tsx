@@ -1,29 +1,27 @@
-import { useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { CardComponent } from "../components/postCard";
-
-interface CardProps {
-  id: string;
-  imgUrl: string;
-  title: string;
-  description: string;
-  createdAt: Date;
-}
+import useRootPage from "../hooks/useRootPage";
 
 function RootPage() {
-  const [cardList, setCardList] = useState<CardProps[]>([]);
-
-  useEffect(() => {
-    fetch("posts.json")
-      .then((resp) => resp.json())
-      .then((posts: CardProps[]) => {
-        setCardList(posts);
-      });
-  }, []);
+  const { cardList, handleCardClick, selectValue, handleSelect } =
+    useRootPage();
 
   return (
     <Container>
-      <Row xs="4">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginBottom: "2rem",
+        }}
+      >
+        <select value={selectValue} onChange={handleSelect}>
+          <option value="newest">Mais Recente</option>
+          <option value="oldest"> Mais Antigo</option>
+        </select>
+      </div>
+
+      <Row lg="4">
         {cardList.map((card) => (
           <Col key={card.id}>
             <CardComponent
@@ -31,7 +29,7 @@ function RootPage() {
               imgUrl={card.imageUrl}
               title={card.title}
               description={card.description}
-              createdAt={card.createdAt}
+              handleCardClick={handleCardClick}
             />
           </Col>
         ))}
