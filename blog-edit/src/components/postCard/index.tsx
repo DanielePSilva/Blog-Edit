@@ -21,20 +21,17 @@ export function CardComponent({
     <Card
       style={{
         width: "18rem",
-        padding: "15px",
+        padding: "10px",
+        height: "43rem",
         cursor: "pointer",
       }}
       onClick={() => handleCardClick(id)}
     >
-      <img
-        alt="Sample"
-        src={imgUrl}
-        style={{ borderRadius: "10px", height: "rem" }}
-      />
+      <img alt="Sample" src={imgUrl} style={{ borderRadius: "15px" }} />
 
       <CardBody>
         <CardTitle tag="h5">{title}</CardTitle>
-        <CardText>{description}</CardText>
+        <CardText style={{ padding: "5px" }}>{description}</CardText>
       </CardBody>
     </Card>
   );
