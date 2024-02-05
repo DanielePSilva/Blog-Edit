@@ -11,7 +11,8 @@ export function PostComponent({ title, description, imgUrl }: PostProps) {
     <Card
       style={{
         width: "100%",
-        padding: "30px",
+        background: "black",
+        borderRadius: "15px",
       }}
     >
       <CardBody
@@ -22,15 +23,24 @@ export function PostComponent({ title, description, imgUrl }: PostProps) {
         <img
           alt="Sample"
           src={imgUrl}
-          style={{ borderRadius: "15px", height: "200px", width: "300px" }}
+          style={{ borderRadius: "15px", height: "400px", width: "500px" }}
         />
         <div
           style={{
-            padding: "15px",
+            padding: "10px",
           }}
         >
-          <CardTitle tag="h5">{title}</CardTitle>
-          <CardText>{description}</CardText>
+          <CardTitle style={{ color: "white" }} tag="h5">
+            {title}
+          </CardTitle>
+          <CardText
+            style={{
+              padding: "10px",
+              color: "white",
+            }}
+          >
+            {description}
+          </CardText>
         </div>
       </CardBody>
     </Card>

@@ -20,18 +20,41 @@ export function CardComponent({
   return (
     <Card
       style={{
-        width: "18rem",
         padding: "10px",
-        height: "43rem",
+        width: "20rem",
+        height: "35rem",
+        borderRadius: "15px",
+        background: "black",
         cursor: "pointer",
+        marginTop: "30px",
       }}
       onClick={() => handleCardClick(id)}
     >
-      <img alt="Sample" src={imgUrl} style={{ borderRadius: "15px" }} />
+      <img
+        alt="Sample"
+        src={imgUrl}
+        style={{ borderRadius: "15px", height: "300px", width: "300px" }}
+      />
 
       <CardBody>
-        <CardTitle tag="h5">{title}</CardTitle>
-        <CardText style={{ padding: "5px" }}>{description}</CardText>
+        <CardTitle
+          style={{
+            color: "white",
+          }}
+          tag="h6"
+        >
+          {title}
+        </CardTitle>
+        <CardText
+          style={{
+            padding: "10px",
+            fontSize: "12px",
+            gap: "30px",
+            color: "white",
+          }}
+        >
+          {description}
+        </CardText>
       </CardBody>
     </Card>
   );

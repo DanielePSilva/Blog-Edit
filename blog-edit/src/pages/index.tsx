@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "reactstrap";
 import { CardComponent } from "../components/postCard";
 import useRootPage from "../hooks/useRootPage";
+import SelectComponent from "../components/select";
 
 function RootPage() {
   const { cardList, handleCardClick, selectValue, handleSelect } =
@@ -8,18 +9,7 @@ function RootPage() {
 
   return (
     <Container>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginBottom: "3rem",
-        }}
-      >
-        <select value={selectValue} onChange={handleSelect}>
-          <option value="newest">Mais Recente</option>
-          <option value="oldest"> Mais Antigo</option>
-        </select>
-      </div>
+      <SelectComponent value={selectValue} onChange={handleSelect} />
 
       <Row lg="4">
         {cardList.map((card) => (

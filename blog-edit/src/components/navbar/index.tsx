@@ -6,7 +6,7 @@ export function NavBarComponent({ children }: { children: ReactNode }) {
   const navigate = useNavigate();
   return (
     <div>
-      <Navbar className="mb-4" color="dark" dark>
+      <Navbar className="mb-5" color="dark" dark>
         <NavbarBrand
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
